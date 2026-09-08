@@ -7,19 +7,27 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# 依赖目录（注意写法，确保能忽略所有层级的 node_modules）
+node_modules/
+dist/
+dist-ssr/
 *.local
 
-# Editor directories and files
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+
+# IDE 配置
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# 你自己的（如果是 mock 数据服务器，不需要上传）
 /mock-server
